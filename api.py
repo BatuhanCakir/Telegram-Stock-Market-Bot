@@ -5,12 +5,14 @@ from telegram.ext import Updater, InlineQueryHandler, CommandHandler
 from telegram.ext.dispatcher import run_async
 import time
 import re
+
 def stockPrice(firm):
+    //using the AlphaVantage API
     parameters = {
     'function': 'TIME_SERIES_INTRADAY',
     'symbol': firm,
     'interval': '5min',
-    'apikey': 'RR2X32T6PCKXAM49',
+    'apikey': 'YOUR TOKEN HERE',
     }
     response = requests.get('https://www.alphavantage.co/query?', params=parameters)
     stakes = response.json()["Time Series (5min)"]
@@ -30,8 +32,6 @@ def jprint(obj):
     text = json.dumps(obj, sort_keys=True, indent=4)
     print(text)
 
-#print(stockPrice('DAI.DE'))
-#print(stockPrice('^GDAXI'))
 
 
 
