@@ -7,7 +7,7 @@ import time
 import re
 
 def stockPrice(firm):
-    //using the AlphaVantage API
+    #using the AlphaVantage API
     parameters = {
     'function': 'TIME_SERIES_INTRADAY',
     'symbol': firm,
