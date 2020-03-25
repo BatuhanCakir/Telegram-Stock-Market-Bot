@@ -53,7 +53,7 @@ def bop(update, context):
 
 
 def main():
-    updater = Updater('971255948:AAHO5jiWZR2noaJEd4hgXKXnQCUyVtXJKEo', use_context=True)
+    updater = Updater('Your Telegram Bot Token Here', use_context=True)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler('stock', bop))
     #dp.add_handler(MessageHandler(Filters.all, callback_method))
